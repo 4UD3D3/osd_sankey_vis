@@ -17,7 +17,7 @@
  * under the License.
  */
 
-import { i18n } from '@kbn/i18n';
+import { i18n } from '@osd/i18n';
 import { AggGroupNames } from '../../../src/plugins/data/public';
 import { Schemas } from '../../../src/plugins/vis_default_editor/public';
 
@@ -29,7 +29,7 @@ import { SankeyOptions } from './components/sankey_options';
 import { VIS_EVENT_TO_TRIGGER } from '../../../src/plugins/visualizations/public';
 import random from '@fortawesome/fontawesome-free/svgs/solid/random.svg';
 
-// define the visType object, which kibana will use to display and configure new Vis object of this type.
+// define the visType object, which will be used to display and configure new Vis object of this type.
 export function sankeyTypeDefinition (core, context) {
   return {
     name: 'kbn_sankey',

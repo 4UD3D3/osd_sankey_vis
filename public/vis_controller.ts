@@ -16,16 +16,16 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { CoreSetup, PluginInitializerContext } from 'kibana/public';
+import { CoreSetup, PluginInitializerContext } from 'opensearch-dashboards/public';
 import angular, { IModule, auto, IRootScopeService, IScope, ICompileService } from 'angular';
 import $ from 'jquery';
 
 import { VisParams, ExprVis } from '../../../src/plugins/visualizations/public';
 import { getAngularModule } from './get_inner_angular';
-import { getKibanaLegacy } from './services';
+import { getOpenSearchDashboardsLegacy } from './services';
 import { initVisLegacyModule } from './vis_legacy_module';
 
-const innerAngularName = 'kibana/kbn_sankey_vis';
+const innerAngularName = 'opensearch-dashboards/kbn_sankey_vis';
 
 export function getSankeyVisualizationController(
   core: CoreSetup,

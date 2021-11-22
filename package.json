@@ -1,12 +1,13 @@
 {
   "name": "kbn-sankey-vis",
-  "version": "7.10.1",
-  "kibana": {
-    "version": "kibana"
+  "version": "1.1.0.0",
+  "opensearchDashboards": {
+    "version": "opensearchDashboards"
   },
   "authors": [
     "Chenryn <rao.chenlin@gmail.com>",
-    "Ch-bas <bassem.chagra@uniberg.com>"
+    "Ch-bas <bassem.chagra@uniberg.com>",
+    "Seth Grover <mero.mero.guero@gmail.com>"
   ],
   "description": "Sankey Diagram Visualization Plugin",
   "license": "Apache-2.0",
@@ -14,8 +15,8 @@
   "repository": "https://github.com/mmguero-dev/kbn_sankey_vis.git",
   "main": "index.js",
   "scripts": {
-    "kbn": "node ../../scripts/kbn",
-    "start": "cd ../.. && node scripts/kibana --dev --oss",
+    "osd": "node ../../scripts/osd",
+    "start": "cd ../.. && node scripts/opensearch_dashboards --dev",
     "test": "nyc --all mocha",
     "build": "yarn plugin-helpers build",
     "plugin-helpers": "node ../../scripts/plugin_helpers"

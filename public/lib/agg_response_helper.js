@@ -86,7 +86,7 @@ module.exports = (function() {
     return links;
   }
   function _convertObjectToArray({rows, missingValues, groupBucket}) {
-    // In the new kibana version, the rows are of type object , where they should be of type array to match the rest of the algorithm .
+    // the rows are of type object , where they should be of type array to match the rest of the algorithm .
     // This is a function to convert the object ( 'col-0-2' : [array]... ) to (0 : [array])
     let newRows = [];
     // The structure of the bucket is as follow: { col-0-1: string, col-0-2: string... }
@@ -99,7 +99,7 @@ module.exports = (function() {
       for (let cell in bucketCopy) {
         // Update the bucket if 'Show missing values' is checked
         // by default, the value is '__missing__'
-        // kibana/kibana-repo/src/ui/public/agg_types/buckets/terms.js
+        // src/ui/public/agg_types/buckets/terms.js
         if (bucketCopy[cell] === '__missing__' && missingValues.length > 0) {
           bucketReplaceProperty(missingValues, bucketCopy, cell);
         }

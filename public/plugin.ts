@@ -23,7 +23,7 @@ import { sankeyTypeDefinition } from './kbn_sankey_vis';
 
 import { DataPublicPluginStart } from '../../../src/plugins/data/public';
 import { setNotifications, setQueryService, setSearchService, setFormatService } from './services';
-import { KibanaLegacyStart } from '../../../src/plugins/kibana_legacy/public';
+import { OpenSearchDashboardsLegacyStart } from '../../../src/plugins/opensearch_dashboards_legacy/public';
 
 
 /** @internal */
@@ -34,7 +34,7 @@ export interface TablePluginSetupDependencies {
 /** @internal */
 export interface TablePluginStartDependencies {
   data: DataPublicPluginStart;
-  kibanaLegacy: KibanaLegacyStart;
+  opensearchDashboardsLegacy: OpenSearchDashboardsLegacyStart;
 }
 
 /** @internal */
@@ -55,7 +55,7 @@ export class EnhancedTablePlugin implements Plugin<Promise<void>, void> {
     );
   }
 
-  public start(core: CoreStart, { data, kibanaLegacy }: TablePluginStartDependencies) {
+  public start(core: CoreStart, { data, opensearchDashboardsLegacy }: TablePluginStartDependencies) {
     setFormatService(data.fieldFormats);
     setNotifications(core.notifications);
     setQueryService(data.query);
