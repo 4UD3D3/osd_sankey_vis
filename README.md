@@ -1,6 +1,6 @@
 # OpenSearch Dashboards Sankey Diagram Plugin
 
-This is a sankey diagram visType plugin for Opensearch Dashboards 1.1.0+, based on [uniberg/kbn_sankey_vis](https://github.com/uniberg/kbn_sankey_vis).
+This is a sankey diagram visType plugin for Opensearch Dashboards 1.2.0+, based on [uniberg/kbn_sankey_vis](https://github.com/uniberg/kbn_sankey_vis).
 
 Here is an example:
 
