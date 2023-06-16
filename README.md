@@ -11,6 +11,8 @@ Here is an example:
 ```
 git clone https://github.com/mmguero-dev/kbn_sankey_vis.git sankey_vis
 cd sankey_vis
+yarn osd clean
+yarn osd bootstrap
 yarn install
 yarn start
 ```
@@ -33,6 +35,8 @@ mkdir opensearch-dashboards
 git clone https://github.com/mmguero-dev/kbn_sankey_vis.git sankey_vis
 cd sankey_vis
 [optional] git checkout -branch
+yarn osd clean
+yarn osd bootstrap
 yarn install
 yarn build --opensearch-dashboards-version X.Y.Z # replace 'X.Y.Z' by desired OpenSearch Dashboards version
 ```
